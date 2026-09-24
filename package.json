@@ -1,0 +1,38 @@
+{
+  "name": "mini-lang",
+  "version": "1.0.0",
+  "description": "A small interpreted programming language implemented in TypeScript: hand-written lexer, recursive-descent parser, AST, tree-walking interpreter and an interactive REPL.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "bin": {
+    "mini-lang": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/cli.js",
+    "dev": "ts-node src/cli.ts",
+    "repl": "ts-node src/repl.ts",
+    "test": "jest",
+    "lint": "eslint src --ext .ts"
+  },
+  "keywords": [
+    "typescript",
+    "interpreter",
+    "programming-language",
+    "compiler",
+    "lexer",
+    "parser",
+    "ast",
+    "repl"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.11.0",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.0"
+  }
+}

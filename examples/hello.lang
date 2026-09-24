@@ -1,0 +1,25 @@
+// A quick tour of mini-lang.
+
+let name = "world";
+print "Hello, " + name + "!";
+
+let a = 3;
+let b = 4;
+print "a + b = " + str(a + b);
+
+if (a < b) {
+  print "a is smaller than b";
+} else {
+  print "a is not smaller than b";
+}
+
+let i = 0;
+while (i < 5) {
+  print "i = " + str(i);
+  i = i + 1;
+}
+
+let numbers = [1, 2, 3, 4, 5];
+print "numbers: " + str(numbers);
+print "length: " + str(len(numbers));
+print "with 6 appended: " + str(push(numbers, 6));

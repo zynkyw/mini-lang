@@ -1,0 +1,37 @@
+// Recursion: naive fibonacci.
+fn fib(n) {
+  if (n < 2) {
+    return n;
+  }
+  return fib(n - 1) + fib(n - 2);
+}
+
+let i = 0;
+while (i < 10) {
+  print "fib(" + str(i) + ") = " + str(fib(i));
+  i = i + 1;
+}
+
+// Closures: make_counter returns a function that closes over `count`.
+fn make_counter() {
+  let count = 0;
+  fn increment() {
+    count = count + 1;
+    return count;
+  }
+  return increment;
+}
+
+let counter = make_counter();
+print "counter: " + str(counter());
+print "counter: " + str(counter());
+print "counter: " + str(counter());
+
+// Higher-order functions: pass a closure as an argument.
+fn apply_twice(f, x) {
+  return f(f(x));
+}
+fn double(x) {
+  return x * 2;
+}
+print "apply_twice(double, 5) = " + str(apply_twice(double, 5));
